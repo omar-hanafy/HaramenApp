@@ -167,7 +167,7 @@ const WelcomeScreen = ({ onStart }: { onStart: () => void }) => {
         <Book className="w-16 h-16 text-primary" />
       </motion.div>
       <div>
-        <h1 className="text-3xl font-black text-primary mb-2">تعلم دينك</h1>
+        <h1 className="text-3xl font-black text-primary mb-2">اهلا بك في منصة الحرمين</h1>
         <p className="text-muted-foreground text-lg">رحلة ممتعة لتعلم الفقه</p>
       </div>
       <Button3D onClick={onStart} className="w-full max-w-xs mt-8">
