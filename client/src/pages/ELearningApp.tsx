@@ -274,16 +274,21 @@ const QuizScreen = ({
   return (
     <div className="flex flex-col h-full max-w-md mx-auto w-full">
       {/* Header */}
-      <div className="pt-4 px-4 pb-6 flex items-center justify-between gap-4">
-         <div className="w-full">
-            <Progress value={((currentIndex) / questions.length) * 100} className="h-4 rounded-full bg-muted [&>div]:bg-primary" />
-         </div>
-         {isPractice && (
-             <div className="flex items-center gap-1 text-orange-500 font-bold animate-pulse">
-                 <Flame className="w-6 h-6 fill-current" />
-                 <span>{streak}</span>
-             </div>
+      <div className="pt-4 px-4 pb-6 flex flex-col gap-4">
+         {!isPractice && (
+            <h1 className="text-xl font-bold text-center text-primary">اختبار تحديد المستوى</h1>
          )}
+         <div className="flex items-center justify-between gap-4 w-full">
+             <div className="w-full">
+                <Progress value={((currentIndex) / questions.length) * 100} className="h-4 rounded-full bg-muted [&>div]:bg-primary" />
+             </div>
+             {isPractice && (
+                 <div className="flex items-center gap-1 text-orange-500 font-bold animate-pulse">
+                     <Flame className="w-6 h-6 fill-current" />
+                     <span>{streak}</span>
+                 </div>
+             )}
+         </div>
       </div>
 
       {/* Content */}
