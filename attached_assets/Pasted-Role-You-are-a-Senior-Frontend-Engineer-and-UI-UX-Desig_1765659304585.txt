@@ -1,0 +1,51 @@
+Role: You are a Senior Frontend Engineer and UI/UX Designer.
+Goal: Create a high-fidelity, interactive mobile web app demo for an e-learning app.
+Global Settings:
+Language: Arabic (The entire UI must be RTL).
+Font: Use a modern Arabic font like 'Cairo' or 'Tajawal' from Google Fonts.
+Tech Stack: React, Tailwind CSS, Lucide React (icons), and Framer Motion (for smooth transitions), if possible, otherwise CSS animations.
+Visual Style (The Vibe):
+Gamified/Juicy: Bright colors, rounded buttons with "3D" bottom borders (Duolingo style), progress bars, and cheerful animations.
+Color Palette: Primary color (#a68c30), Secondary White, Text Dark Grey (#4B4B4B), Error Red (#FF4B4B).
+App Flow & State Machine: The app must follow this exact sequence of screens without refreshing:
+1. The Welcome Screen:
+Show the Logo (use a placeholder Icon like a Book) in the center.
+Animate the logo (bounce or pulse).
+Show a "Start Now" (ابدأ الآن) button or auto-transition after 3 seconds.
+2. The Placement Test:
+Display a progress bar at the top.
+Cycle through 3 specific questions (Data provided below).
+Logic: User selects an answer -> Immediate feedback (Green/Red) -> Next question.
+3. The "Level Up" Reveal:
+A celebratory screen with confetti or animation.
+Large text stating: "You are at Level 3" (translated: أنت في المستوى 3).
+Button: "Continue" (تابع).
+4. The Lesson Card:
+A clean, focused screen displaying a core concept or rule.
+Content: Display the specific text provided below in a nice card with an icon.
+Button: "Let's Practice" (لنتدرب).
+5. The Practice Quiz:
+3 Multiple Choice Questions (Data provided below).
+Features: Streak counter in the header, "Check Answer" button at the bottom.
+Logic: Correct answer plays a sound/animation; Wrong answer shows the correct solution.
+6. The Result Screen:
+Duolingo-style summary.
+Show: "Lesson Complete!" (تم الدرس!), XP earned, and Accuracy percentage.
+Button: "Finish" (إنهاء).
+DATA & CONTENT CONFIGURATION: Please inject this data into the application state:
+A. Placement Test Questions (3 items):
+Question: أيُّ العبادات تُسمّى عمود الدين؟ | Options: الصيام, الصلاة, الزكاة | Correct: الصلاة
+Question: ترك صلاة الفجر حتى خرج وقتها نومًا | Options: عليه كفارة مالية, يقضيها آخر اليوم فقط, يقضيها إذا استيقظ، تسقط ولا تُقضى | Correct: يقضيها آخر اليوم فقط
+Question: عدد ركعات صلاة المغرب | Options: 3, 4, 2 | Correct: 3
+B. The Lesson Text Screen:
+Title: أنواع الطهارة 
+Body Text: هناك نوعان من الطهارة
+أولا الطهارة المعنوية: وهي طهارة القلب من الشرك والبدع فيما يتعلق بحقوق الله عز وجل، وهذا هو أعظم الطهارتين
+ثانياً الطهارة الحسية: وهي رفع الحدث وزوال الخبث
+والخبث هو النجاسة ويتوجب إزالتها من بدن المصلي وملابسه ومكان صلاته
+C. Practice Quiz Questions (3 items):
+Question: مسُّ الفرج باليد مباشرةً بلا حائل  | Options: يوجب الوضوء, لا يوجب الوضوء، يوجب الغُسل | Correct: يوجب الوضوء
+Question: من نواقض الوضوء | Options: غسل اليدين, خروج الريح, مسح الرأس، شرب العصير | Correct: خروج الريح
+Question: الصلاة بلا وضوء عمدًا | Options: باطلة ويأثم, صحيحة إن قرأ الفاتحة، تصح إن قرأ الفاتحة، لا تصح | Correct: باطلة ويأثم
+Output Requirement: Provide the full, runnable code in a single React component (or suitable file structure) that handles all these states seamlessly. Ensure the Layout direction is set to RTL.
+
