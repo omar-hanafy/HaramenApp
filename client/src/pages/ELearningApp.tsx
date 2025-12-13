@@ -141,11 +141,6 @@ const Button3D = ({
 };
 
 const WelcomeScreen = ({ onStart }: { onStart: () => void }) => {
-  useEffect(() => {
-    const timer = setTimeout(onStart, 3000);
-    return () => clearTimeout(timer);
-  }, [onStart]);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
