@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Book, Check, X, Trophy, Star, ArrowRight, Volume2, ShieldCheck, Flame } from "lucide-react";
+import { Book, Check, X, Trophy, Star, ArrowRight, Volume2, ShieldCheck, Flame, ClipboardList } from "lucide-react";
 import confetti from "canvas-confetti";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -275,9 +275,6 @@ const QuizScreen = ({
     <div className="flex flex-col h-full max-w-md mx-auto w-full">
       {/* Header */}
       <div className="pt-4 px-4 pb-6 flex flex-col gap-4">
-         {!isPractice && (
-            <h1 className="text-xl font-bold text-center text-primary">اختبار تحديد المستوى</h1>
-         )}
          <div className="flex items-center justify-between gap-4 w-full">
              <div className="w-full">
                 <Progress value={((currentIndex) / questions.length) * 100} className="h-4 rounded-full bg-muted [&>div]:bg-primary" />
@@ -289,6 +286,13 @@ const QuizScreen = ({
                  </div>
              )}
          </div>
+
+         {!isPractice && (
+            <div className="flex items-center justify-center gap-2 mt-1 animate-in fade-in slide-in-from-top-2 duration-500">
+                <ClipboardList className="w-5 h-5 text-primary" />
+                <h1 className="text-lg font-bold text-primary">اختبار تحديد المستوى</h1>
+            </div>
+         )}
       </div>
 
       {/* Content */}
