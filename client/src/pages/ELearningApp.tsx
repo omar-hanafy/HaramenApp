@@ -5,6 +5,7 @@ import confetti from "canvas-confetti";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
+import logoImage from "@assets/loo_1765659821255.png";
 
 // --- Types ---
 type Question = {
@@ -154,17 +155,20 @@ const WelcomeScreen = ({ onStart }: { onStart: () => void }) => {
     >
       <motion.div
         animate={{
-          scale: [1, 1.1, 1],
-          rotate: [0, 5, -5, 0],
+          scale: [1, 1.05, 1],
         }}
         transition={{
-          duration: 2,
+          duration: 3,
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className="w-32 h-32 bg-primary/20 rounded-full flex items-center justify-center"
+        className="flex items-center justify-center mb-8"
       >
-        <Book className="w-16 h-16 text-primary" />
+        <img 
+          src={logoImage} 
+          alt="Haramain Platform Logo" 
+          className="w-48 h-auto object-contain drop-shadow-lg"
+        />
       </motion.div>
       <div>
         <h1 className="text-3xl font-black text-primary mb-2">اهلا بك في منصة الحرمين</h1>
